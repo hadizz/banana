@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import bananaImage from "/public/images/banana.webp";
 
 // todo
 // - [ ] add app navigation in the bottom
@@ -198,7 +197,7 @@ export default function Home() {
           }}
         >
           <Image
-            src={bananaImage}
+            src={"/static/banana.webp"}
             alt="Banana"
             width={banana.width}
             height={banana.height}
