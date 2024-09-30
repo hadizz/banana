@@ -4,11 +4,18 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
+// todo
+// - [ ] add app navigation in the bottom
+// - [ ] add game counter, top down is like a soccer game, whenever a banana hits it it adds the number up.
+// - [ ] awhen some banan hits hadiz, we show 🎉
+// - [ ] when user click on bana it removes
+// - [ ] user can drag banana everywhere (we can disable auto direction moving)
+
 export default function Home() {
   const [bananas, setBananas] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const normalSize = 36;
-  const textSize = { width: 100, height: 40 }; // Approximate size for the text box
+  const textSize = { width: 90, height: 30 }; // Approximate size for the text box
 
   useEffect(() => {
     const width = window.innerWidth;
@@ -23,8 +30,8 @@ export default function Home() {
       return {
         x: centerX + distance * Math.cos(angle) - normalSize / 2,
         y: centerY + distance * Math.sin(angle) - normalSize / 2,
-        xspeed: Math.random() * 8 - 4,
-        yspeed: Math.random() * 8 - 4,
+        xspeed: (Math.random() * 6 - 2), // Reduced speed
+        yspeed: (Math.random() * 6 - 2), // Reduced speed
         width: normalSize,
         height: normalSize,
         rotation: Math.random() * 10, // Initial rotation set to a small value
