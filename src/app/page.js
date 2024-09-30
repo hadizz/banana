@@ -197,7 +197,7 @@ export default function Home() {
           }}
         >
           <Image
-            src={"/static/banana.webp"}
+            src={"/static/banana.png"}
             alt="Banana"
             width={banana.width}
             height={banana.height}
