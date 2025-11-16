@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 // - [ ] awhen some banan hits hadiz, we show 🎉
 // - [ ] when user click on bana it removes
 // - [ ] user can drag banana everywhere (we can disable auto direction moving)
+// - [ ] user buys banana, we add banana to site!
 
 export default function Home() {
   const [bananas, setBananas] = useState([]);
@@ -162,7 +163,7 @@ export default function Home() {
 
   return (
     <div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden', background: '#000' }}>
-      <div style={{
+      <a style={{
         position: 'absolute',
         top: '50%',
         left: '50%',
@@ -171,9 +172,13 @@ export default function Home() {
         fontSize: '24px',
         fontWeight: 'bold',
         zIndex: 10,
-      }}>
+      }}
+      href="https://hadizare.com?ref=banana"
+      target="_blank"
+      rel="noopener noreferrer"
+      >
         Hadiz
-      </div>
+      </a>
       {bananas.map((banana, index) => (
         <motion.div
           key={index}
